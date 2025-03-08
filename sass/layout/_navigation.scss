@@ -70,14 +70,7 @@
 
         
        
-         @include media-breakpoint-down(md) {
-            color: $color-primary;
-            position: relative;
-            left: 2rem;
-            
-            
-        }
-
+        
 
         
         
@@ -96,8 +89,10 @@
 
         @include media-breakpoint-down(xl) {
             position: relative;
-            left: 57rem;
+            left: 15rem;
         }
+
+
 
 
         @include media-breakpoint-down(lg) {
@@ -108,7 +103,8 @@
 
 
         
-        @include media-breakpoint-down(md) {            color: $color-primary;
+        @include media-breakpoint-down(md) {            
+            color: $color-primary;
             position: relative;
             left: 2rem;
 

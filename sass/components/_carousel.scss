@@ -1,4 +1,5 @@
 .carousel-item {
+  position: relative;
    
    
   
@@ -42,6 +43,12 @@
 }
 
 .carousel-caption {
+  display: grid; 
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  
 
   
 
@@ -49,11 +56,8 @@
 
   @include media-breakpoint-down(xl) {
    
-
-      position: absolute;
-      top: 15rem;
-     
-      text-align: center;
+      top: 60rem;
+     text-align: center;
       
      
      
@@ -62,17 +66,16 @@
  
  
   @include media-breakpoint-down(lg) {
-      position: absolute;
-      top: 15rem;
-     
+   
+      top: 65rem;
       text-align: center;
       
   }
   
   
   @include media-breakpoint-down(md) {
-      position: relative;
-      top: 50rem;
+    
+      top: 12rem;
      
       text-align: center;
      

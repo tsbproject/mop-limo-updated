@@ -41,7 +41,7 @@
     <header id="header" class="header fixed-top">
    
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <button class="-header-btn" id="requestQuoteBtn">Request a Quote</button>
+      <button class="header-btn" id="requestQuoteBtn">Request a Quote</button>
         <div class="container">
           <a class="navbar-brand" href="index.php"><img class="site-logo" src="images/mop-logo.png" alt="site-logo"></a>
           
@@ -265,6 +265,7 @@
 
             <!-- Mathematical CAPTCHA -->
             <div class="form-group captcha">
+                <span id="captchaValue"></span> &nbsp;  &nbsp;  &nbsp;
                 <input type="text" id="captcha" placeholder="Enter answer" required>
                 <span id="captchaValue"></span>
             </div>
