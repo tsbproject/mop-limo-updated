@@ -1,0 +1,140 @@
+.carousel-item {
+   
+   
+  
+  
+  
+  
+  
+  &__img {
+ 
+    // height: 130vh 
+     height: 131.7vh;
+    filter: brightness(65%);
+
+
+  
+  
+    
+    
+    @include media-breakpoint-down(xl) {
+      
+    } 
+    
+    
+    
+    @include media-breakpoint-down(lg) {
+      
+    }
+
+
+    @include media-breakpoint-down(md) {
+    
+        max-height: 39rem;
+       
+    }
+    
+    
+  }
+
+    
+
+}
+
+.carousel-caption {
+
+  
+
+
+
+  @include media-breakpoint-down(xl) {
+   
+
+      position: absolute;
+      top: 15rem;
+     
+      text-align: center;
+      
+     
+     
+  }
+  
+ 
+ 
+  @include media-breakpoint-down(lg) {
+      position: absolute;
+      top: 15rem;
+     
+      text-align: center;
+      
+  }
+  
+  
+  @include media-breakpoint-down(md) {
+      position: relative;
+      top: 50rem;
+     
+      text-align: center;
+     
+      
+  }
+  
+  
+ 
+    
+  &__header {
+    font-family: "Oxygen" sans-serif;
+    font-size: 10rem;
+    position: relative;
+    bottom: 53rem;
+    color: $color-primary;
+
+    @include media-breakpoint-down(md) {
+         font-size: 3rem;
+         position: relative;
+         bottom: 5rem;
+
+    }
+
+  }
+
+
+  &__description {
+    font-family: "Lora" serif ;
+    font-size: 3rem;
+    position: relative;
+    bottom: 53rem;
+
+    @include media-breakpoint-down(md) {
+         font-size: 1.3rem;
+         position: relative;
+         bottom: 5rem;
+
+         
+  
+        
+   }
+
+  
+
+
+  }
+
+
+
+
+
+}
+
+
+.carousel-item {
+
+  &__testimonial {
+    font-size: $default-font-size;
+  }
+
+  &__header {
+    color: $color-primary;
+  }
+  
+}
