@@ -109,8 +109,14 @@ body {
 
 .section-about {
 
+  @include media-breakpoint-down(lg) {
+       margin-top: 30rem;
+ }
+  
+
   @include media-breakpoint-down(sm) {
-     height: 180rem;
+    margin-top: -7rem;
+     height: 300rem;
   }
    
 
@@ -176,16 +182,12 @@ body {
 }
 
 
-.card.img {
-  height: 20rem;
-}
-
 
 .section-testimonial{
 
   @include media-breakpoint-down(sm) {
 
-    margin-top: 30rem;
+  
   }
 
   &--heading {

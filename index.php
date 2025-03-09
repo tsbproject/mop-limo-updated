@@ -41,10 +41,11 @@
     <header id="header" class="header fixed-top">
    
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <button class="header-btn" id="requestQuoteBtn">Request a Quote</button>
+      
         <div class="container">
+        
           <a class="navbar-brand" href="index.php"><img class="site-logo" src="images/mop-logo.png" alt="site-logo"></a>
-          
+          <button class="header-btn" id="requestQuoteBtn">Request a Quote</button>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
            data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" 
            aria-label="Toggle navigation">
@@ -230,6 +231,55 @@
         <form id="quoteForm">
             <div class="form-group">
                 <label>Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label>Number of Hours:</label>
+                <input type="number" id="hours" name="hours" placeholder="Enter number of hours" required>
+            </div>
+            <div class="form-group">
+                <label>Number of Passengers:</label>
+                <input type="number" id="passengers" name="passengers" placeholder="Enter number of passengers" required>
+            </div>
+            <div class="form-group">
+                <label>Pick Up Location:</label>
+                <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
+            </div>
+            <div class="form-group">
+                <label>Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+            </div>
+            <div class="form-group">
+                <label>Pick-Up Date:</label>
+                <input type="date" id="pickupDate" name="pickupDate" required>
+            </div>
+            <div class="form-group">
+                <label>CAPTCHA:</label>
+                <span id="captchaValue"></span>
+                <input type="text" id="captcha" name="captcha" placeholder="Enter answer" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- <div class="modal" id="quoteModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Request a Quote</h2>
+        <form id="quoteForm">
+            <div class="form-group">
+                <label>Name:</label>
                 <input type="text" id="name" placeholder="Enter your full name" required>
             </div>
             <div class="form-group">
@@ -257,13 +307,13 @@
                 <input type="text" id="destination" placeholder="Enter destination" required>
             </div>
             
-            <!-- 🚀 New Date Picker with Placeholder -->
+           
             <div class="form-group">
                 <label>Pick-Up Date:</label>
                 <input type="date" id="pickupDate" required>
             </div>
 
-            <!-- Mathematical CAPTCHA -->
+      
             <div class="form-group captcha">
                 <span id="captchaValue"></span> &nbsp;  &nbsp;  &nbsp;
                 <input type="text" id="captcha" placeholder="Enter answer" required>
@@ -273,7 +323,30 @@
             <button type="submit" class="submit-btn">Submit</button>
         </form>
     </div>
-</div>
+</div> -->
+
+<!-- <script>
+    document.getElementById("quoteForm").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+
+        let formData = new FormData(this);
+
+        fetch("submit_quote.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            if (data.status === "success") {
+                document.getElementById("quoteForm").reset(); // Reset form on success
+                document.getElementById("quoteModal").style.display = "none"; // Close modal
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    });
+</script> -->
+
    
       
 
@@ -421,7 +494,7 @@
       GET IN TOUCH</h4></div>
     <div class="container ">
       <div class="row g-5">
-        <div id="section-contact-info" class="col-sm-4">
+        <div id="section-contact-info" class="col-sm-5">
          <div class="p-2 section-contact-info u-center-text ">
           <i class="section-contact__icon  icon-basic-mail-open-text "></i>
           <a class="section-contact__iink text-decoration-none" href="mailto:"><p class="section-contact__email">moplimoservices@gmail.com</p>
@@ -435,7 +508,7 @@
          </div>
         </div>
         
-        <div id="section-contact-form" class="col-sm-8 justify-content-center">
+        <div id="section-contact-form" class="col-sm-7 justify-content-center">
           <div class="section-contact-form p-2 ">
             <form action="process_form.php" method="post" id="contactForm" class="form"> 
               <div class="u-margin-bottom-medium">
@@ -491,7 +564,7 @@
 
                    
                 <div class="form__group ">
-                  <button class=" btn btn-primary  section-form__submit g-recaptcha" data-sitekey="6LfwHx4qAAAAAD1YaFK2cyQBO_L2bjnYIgRQs-yk" data-callback="onSubmit">Submit &rAarr;</button>
+                  <button class="  section-form__submit g-recaptcha" data-sitekey="6LfwHx4qAAAAAD1YaFK2cyQBO_L2bjnYIgRQs-yk" data-callback="onSubmit">Submit &rAarr;</button>
                 </div>
 
                 <p id="response" class="message"></p>

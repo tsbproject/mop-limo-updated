@@ -215,13 +215,89 @@
     display: none;
     position: fixed;
     left: 0;
+    top: 10rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index:1000 ;
+    padding-bottom: 25rem;
+    padding-top: 35rem;
+
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25rem;
+        padding-top: 48rem;
+
+       
+}
+
+
+
+    @include media-breakpoint-down(md) {
+        display: none;
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25rem;
+        padding-top: 48rem;
+
+       
+}
+
+
+
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25rem;
+        padding-top: 48rem;
+       
+}
+
+
+@include media-breakpoint-down(xm) {
+    display: none;
+    position: absolute;
+    left:0;
     top: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    padding-bottom: 25rem;
+    padding-top: 48rem;
+   
 }
+
+}
+
+
+
 .modal-content {
     background: white;
     padding: 20px;
@@ -242,6 +318,7 @@
     margin-bottom: 15px;
 }
 label {
+    font-size: 1.4rem;
     font-weight: bold;
     display: block;
 }
@@ -253,6 +330,7 @@ input {
     border-radius: 5px;
 }
 .captcha {
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
 }
@@ -264,7 +342,7 @@ input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    background: #28a745;
+    background: $color-primary;
     color: white;
     border: none;
     cursor: pointer;

@@ -87,3 +87,25 @@ const form = document.getElementById('contactForm');
             });
         });
         
+
+
+
+        document.getElementById("quoteForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            let formData = new FormData(this);
+    
+            fetch("submit_quote.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.status === "success") {
+                    document.getElementById("quoteForm").reset(); // Reset form on success
+                    document.getElementById("quoteModal").style.display = "none"; // Close modal
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
